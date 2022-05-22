@@ -47,9 +47,9 @@ video {
 .imgBack{
   position: relative;
   z-index: 2;
-  max-width: 50px;
+  max-width: 71px;
   /* max-height: 1000px;  */
-  top: 20.5em;
+  top: 19.3em;
   left: 9.7em;
   /* display: none; */
 }
