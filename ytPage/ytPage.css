@@ -1,0 +1,131 @@
+@import url('http://fonts.cdnfonts.com/css/vogue');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+video {
+  object-fit: fill;
+  
+
+}
+video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  /* overflow-y:scroll; */
+}
+.logo{
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 12em;
+}
+.logo1{
+  z-index: 1;
+  position: absolute;
+  max-width: 15em;
+  top: 23em;
+  right: 11em;
+}
+
+.logo img{
+  max-width: 16em;
+  max-height: 17em;
+  width: auto;
+  height: auto;
+}
+
+.imgBack{
+  position: relative;
+  z-index: 2;
+  max-width: 50px;
+  /* max-height: 1000px;  */
+  top: 20.5em;
+  left: 9.7em;
+  /* display: none; */
+}
+.imgText{
+  width: 26em;
+  height: 7em;
+
+}
+
+.textBack{
+  display: flex;
+  position:absolute;
+  z-index: 1;
+  /* max-width: 100px;
+  max-height: 100px; */
+  top: 13em;
+  left: 12em;
+  font-size: 21px; 
+  letter-spacing: 5px;
+  /* line-height: 80%; */
+}
+.textBack1{
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  /* max-width: 100px;
+  max-height: 100px; */
+  top: 11.5em;
+  left: 8.8em;
+  font-size: 28px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  
+}
+
+h1{
+  color: white;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .imgBack{
+    position: relative;
+    z-index: 2;
+    max-width: 50px;
+    /* max-height: 1000px;  */
+    top: 16em;
+    left: 8.5em;
+    /* display: none; */
+  }
+  .imgText{
+    width: 23em;
+    height: 6.5em;
+  
+  }
+}
+
+#preloader{
+  background: #000 url(img/loading-2.gif) no-repeat center center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10000000000;
+}
+/* Scroll 5 */
+/* ::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+	-webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}*/

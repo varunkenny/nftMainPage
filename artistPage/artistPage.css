@@ -1,0 +1,169 @@
+@import url('http://fonts.cdnfonts.com/css/vogue');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#myVideo {
+  /* position: fixed; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* overflow: hidden; */
+  overflow-y: scroll;
+}
+
+.logo {
+  z-index: 1;
+  position: relative;
+  top: 0;
+  /* right: 8em; */
+}
+
+.backMenu {
+  position: absolute;
+  z-index: 1;
+  right: 4em;
+  top: 2em;
+}
+
+.logo1 {
+  z-index: 1;
+  position: absolute;
+  top: 18em;
+  right: 14em;
+  max-width: 12em;
+}
+
+/* .logo img{
+  max-width: 12em;
+  max-height: 12.5em;
+  width: auto;
+  height: auto;
+} */
+
+.imgBack {
+  position: absolute;
+  z-index: 2;
+  max-width: 55px;
+  
+  /* max-height: 1000px; */
+  top: 46.5em;
+  left: 2.5em;
+  /* display: none; */
+}
+
+
+.imgText {
+  width: 27em;
+  height: 6.5em;
+
+}
+
+
+.imgInsta{
+  
+  position: absolute;
+  z-index: 2;
+  /* max-width: 5px; */
+  /* max-height: 1000px; */
+  top: 35.8em;
+  right: 28em;
+  /* display: none; */
+}
+
+.imgInsta img{
+  display: block;
+}
+
+.imgInstaLink{
+  padding-top: 1em;
+}
+.imgEmailLink{
+  padding-top: 1em;
+}
+
+.imgInstaFooter{
+  
+  position: absolute;
+  z-index: 2;
+  /* max-width: 5px; */
+  /* max-height: 1000px; */
+  bottom: -29em;
+  left: 4.5em;
+  /* display: none; */
+}
+
+
+.imgInstaFooter img{
+  display: block;
+}
+
+/* .textBack{
+  display: flex;
+  position:absolute;
+  z-index: 1;
+  
+  top: 13em;
+  left: 12em;
+  font-size: 21px; 
+  letter-spacing: 5px;
+  
+} */
+/* .textBack1{
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 11.5em;
+  left: 8.8em;
+  font-size: 28px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  
+} */
+
+h1 {
+  color: white;
+  margin-right: 10px;
+}
+
+/* @media (max-width: 1240px) {
+  .imgBack{
+    position: relative;
+    z-index: 2;
+    max-width: 50px;
+    max-height: 1000px; 
+    top: 16em;
+    left: 8.5em;
+    display: none;
+  }
+  .imgText{
+    width: 23em;
+    height: 6.5em;
+    
+  
+  }
+} */
+
+/* Scroll 5 */
+/* ::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+	-webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}*/
