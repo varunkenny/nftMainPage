@@ -16,55 +16,76 @@
     <div id="preloader"></div>
 
     <div class="content">
-
+        <!-- <div>
+            <video src=""></video>
+        </div> -->
+        <!-- <div class="nftPng">
+            <img src="./img&video/nftpnglnk.png" alt="">
+        </div> -->
 
         <section class="logo">
             <a href="/artistPage/artistPage.html"><img class="brain" src="img&video/imgElement/brain.png" alt=""></a>
             <a href="../index.html"><img class="backMenu" src="img&video/imgElement/landingBack.png" alt=""></a>
             <div class="swan">
-                <a href=""><img src="img&video/imgElement/swan.png" alt=""></a>
+                <a href="../ytPage/ytPage.html"><img src="img&video/imgElement/swan.png" alt=""></a>
             </div>
         </section>
 
-        <a href=""><img class="logo1" src="img/animeLogo.png" alt=""></a>
+        <a href="../artistPage/artistPage.html"><img class="logo1" src="img/animeLogo.png" alt=""></a>
         <div class="seqImg">
-            <!-- <a href="#headerPopup" id="headerVideoLink" target="_blank" class="btn btn-outline-danger popup-modal">See Why Solodev WXP</a> -->
             <img class="btn" src="img&video/imgElement/SEQFT0.png" data-toggle="modal" data-target="#seq0" alt="">
-            
+
 
             <img class="btn" src="img&video/imgElement/SEQFT1.png" data-toggle="modal" data-target="#seq1" alt="">
-            
+
 
             <img class="btn" src="img&video/imgElement/SEQFT2.png" data-toggle="modal" data-target="#seq2" alt="">
-          
+
 
             <img class="btn" src="img&video/imgElement/SEQFT3.png" data-toggle="modal" data-target="#seq3" alt="">
-            
+
 
             <img class="btn" src="img&video/imgElement/SEQFT4.png" data-toggle="modal" data-target="#seq4" alt="">
-            
+
             <img class="btn" src="img&video/imgElement/SEQFT5.png" data-toggle="modal" data-target="#seq5" alt="">
-            
+
 
             <img class="btn" src="img&video/imgElement/SEQFT6.png" data-toggle="modal" data-target="#seq6" alt="">
-            
+
             <img class="btn" src="img&video/imgElement/SEQFT7.png" data-toggle="modal" data-target="#seq7" alt="">
-            
+
             <img class="btn" src="img&video/imgElement/SEQFT8.png" data-toggle="modal" data-target="#seq8" alt="">
-            
+
             <img class="btn" src="img&video/imgElement/SEQFT9.png" data-toggle="modal" data-target="#seq9" alt="">
-            
+
 
         </div>
-        <!-- ----------------------------------------------------------------------- -->
+
+
+
+
         <!-- Button trigger modal -->
-        <video preload="none" autoplay muted loop>
-            <source src="img&video/nftBG.mp4" type="video/mp4" />
-            Your browser does not support HTML5 video.
-        </video>
+        <div class="bg">
+            <video preload="none" autoplay muted loop>
+                <source src="img&video/nftpg bg f.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+            </video>
+
+        </div>
+
+        <div class="card1">
+            <div class="face front">
+                <img src="./img&video/nftpnglnk.png" width="500px" alt="">
+            </div>
+            <div class="face back">
+                <video class="polystar" src="./img&video/aseq4-5.mp4" width="480px" preload="auto"></video>
+            </div>
+        </div>
+
+
         <div class="seqImgBottom">
-            <a href="https://opensea.io/collection/frames-of-asphodel-c-1"><img src="img&video/imgElement/colaNft.png"
-                    alt=""></a>
+            <a href="https://opensea.io/collection/frames-of-asphodel-c-1" target="_blank"><img src="img&video/imgElement/colaNft.png" width="310px" alt=""></a>
+            <a href="https://foundation.app/collection/b-f253" target="_blank"><img src="img&video/imgElement/collectionb.png" width="310px" alt=""></a>
         </div>
 
 
@@ -76,7 +97,7 @@
                 <div class="modal-content">
 
                     <div class="modal-body">
-                        <video class="lazy" src="./img&video/seqss/seq0.mp4" autoplay controls loop muted> </video>
+                        <video class="lazy clip" src="./img&video/seqss/seq0.mp4" autoplay controls loop muted> </video>
                     </div>
 
                 </div>
@@ -142,7 +163,7 @@
                 <div class="modal-content">
 
                     <div class="modal-body">
-                        <video class="lazy" src="./img&video/seqss/seq6.mp4" autoplay loop muted></video>
+                        <video class="lazy clip" src="./img&video/seqss/seq6.mp4" autoplay loop muted></video>
                     </div>
 
                 </div>
@@ -175,7 +196,7 @@
                 <div class="modal-content">
 
                     <div class="modal-body">
-                        <video class="lazy" src="./img&video/seqss/seq9.mp4" autoplay loop muted></video>
+                        <video id="myVid" class="lazy" src="./img&video/seqss/seq9.mp4" autoplay muted></video>
                     </div>
 
                 </div>
@@ -189,9 +210,6 @@
 
 
     <!-- ----------------------------------------------------------------------- -->
-
-
-
 
 
     <!-- JavaScript Bundle with Popper -->
@@ -235,18 +253,37 @@
         
         
     </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        
+
+
+        var $polystar = $('.polystar');
+        $polystar.on('mouseenter', function () {
+            $polystar.get(0).play();
+        });
+        $polystar.on('mouseout', function () {
+            $polystar.get(0).pause();
+        });
+
+
         function myFunction() {
             var preloader = document.getElementById('preloader')
-            
+
             preloader.style.display = 'none';
-            $(window).on("preloader",function(){
+            $(window).on("preloader", function () {
 
                 $("#preloader").fadeOut("slow")
                 $(".content").fadeIn("slow")
             })
         }
+
+        const video = document.getElementById('myVid');
+
+        video.onended = (event) => {
+            console.log('Video stopped either because 1) it was over, ' +
+                'or 2) no further data is available.');
+            video.close();
+        };
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -5,10 +5,12 @@
   box-sizing: border-box;
 }
 
-video {
+.bg video {
   width: 100% !important;
   height: 100% !important;
 }
+
+
 
 #myVideo {
   /* position: fixed; */
@@ -19,12 +21,77 @@ video {
   /* overflow: hidden; */
   overflow-y:scroll;
 }
+
+.nftPng{
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+
+.nftPng img{
+  max-width: 70%;
+  /* max-height; */
+
+}
+
 .logo{
   z-index: 1;
   position: absolute;
   top: 0;
   right: 10em;
 }
+
+/* **********************************hoverEffect********************************** */
+
+.card1 {
+  position: absolute;
+  z-index: 10;
+  top: 78%;
+  left: 20%;
+  /* width: 800px; */
+  /* height: 400px; */
+  transform-style: preserve-3d;
+}
+
+.card1 .face{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* max-width: 10em; */
+  width: 40%;
+  height: 10%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+  transform: perspective(500px) rotateY(0deg);
+}
+
+.card .face.front{
+  /* background: #ff0; */
+}
+.card1:hover .face.front{
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card1 .face.back{
+  /* background: #3bc2ff;
+  color: #fff; */
+  transform: perspective(500px) rotateY(180deg);
+  
+}
+
+.card1:hover .face.back{
+  transform: perspective(500px) rotateY(360deg);
+}
+
+
+
+/* ******************************************************************************** */
+
+
 
 .swan img{
   position: relative;
@@ -63,6 +130,7 @@ video {
 }
 
 .brain{
+  position: relative;
   width: 14em;
   height: 17em;
 }
@@ -138,14 +206,17 @@ h1{
 .seqImgBottom{
   position: absolute;
   z-index: 2;
-  bottom: -87em;
-  left: 7.5em;
-  padding-left: 10px;
+  bottom: -99em;
+  left: 9.5em;
+  padding-left: 7px;
 }
 .seqImgBottom img{
-width: 20.8em;
-height: 8.5em;
-padding: 0 13px ;
+  display: flex;
+/* width: 25em;
+height: 14em; */
+padding-bottom: 40px;
+
+/* padding: 15px 13px ; */
  }
  
 .btn{
@@ -210,7 +281,7 @@ padding: 0 13px ;
 }
 
 #preloader{
-  background: #000 url(../img/loading-2.gif) no-repeat center center;
+  background: #000 url(../img/loading3.gif) no-repeat center center;
   background-size: 30%;
   height: 100vh;
   width: 100%;

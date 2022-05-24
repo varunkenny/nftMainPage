@@ -4,58 +4,67 @@
   padding: 0;
   box-sizing: border-box;
 }
-video {
+/* video {
   object-fit: fill;
   
 
-}
+} */
 video {
-  width: 100% !important;
-  height: 100% !important;
+  /* width: 100% !important;
+  height: 100vh !important; */
 }
 
 #myVideo {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
+  position: absolute;
+  /* top: 3em; */
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+
+  /* overflow: hidden; */
   /* overflow-y:scroll; */
 }
+
 .logo{
   z-index: 1;
   position: absolute;
   top: 0;
   right: 12em;
+  max-width: 25%;
+}
+.logo img{
+  max-width: 80%;
+  max-height: 100%;
+  /* max-height: 17em; */
+  /* width: auto;*/
+  height: auto; 
 }
 .logo1{
   z-index: 1;
   position: absolute;
-  max-width: 15em;
+  max-width: 18%;
   top: 23em;
   right: 11em;
 }
 
-.logo img{
-  max-width: 16em;
-  max-height: 17em;
-  width: auto;
-  height: auto;
-}
 
 .imgBack{
-  position: relative;
+  position: absolute;
   z-index: 2;
-  max-width: 71px;
-  /* max-height: 1000px;  */
-  top: 19.3em;
-  left: 9.7em;
+  max-width: 100%;
+  width: 100%;
+  top: 43%;
+  left: 4.5%;
   /* display: none; */
 }
 .imgText{
-  width: 26em;
-  height: 7em;
+  width: 30%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  /* height: 100%; */
 
 }
 
@@ -90,14 +99,14 @@ h1{
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 915px) {
   .imgBack{
     position: relative;
     z-index: 2;
     max-width: 50px;
     /* max-height: 1000px;  */
-    top: 16em;
-    left: 8.5em;
+    top: 10em;
+    left: 8em;
     /* display: none; */
   }
   .imgText{
@@ -105,15 +114,42 @@ h1{
     height: 6.5em;
   
   }
+  .logo1{
+    display: none;
+    /* z-index: 1;
+    position: absolute; */
+    /* max-width: 1em;
+    bottom: 10em;
+    right: 1em; */
+  }
 }
 
 #preloader{
-  background: #000 url(img/loading-2.gif) no-repeat center center;
+  background: #000 url(img/loading3.gif) no-repeat center center;
   background-size: 30%;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 10000000000;
+}
+
+@media (max-width: 400px) {
+  .imgBack{
+    position: absolute;
+    z-index: 2;
+    max-width: 50px;
+    max-height: 1000px; 
+    /* top: 14.3em; */
+    top: 43%;
+    left: 5%;
+    /* display: none; */
+  }
+  .imgText{
+    width: 23.5em;
+    height: 7em;
+    
+  
+  }
 }
 /* Scroll 5 */
 /* ::-webkit-scrollbar {
